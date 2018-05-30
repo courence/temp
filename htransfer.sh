@@ -47,8 +47,11 @@ echo "gpg error"
 exit 3
 fi
 
-cd STEMP
+rm -rf $FILE_NAME
+
+cd $TEMP
+git pull
 git add .
-time=`date '+%Y%m%d %H%M%S'`
+time=`date '+%Y%m%d%H%M%S'`
 git commit -m "$time:$TEMP_DIR"
 hgitpush $USER $PASSWD
