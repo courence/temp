@@ -52,6 +52,5 @@ rm -rf $FILE_NAME
 cd $TEMP
 git pull
 git add .
-time=`date '+%Y%m%d%H%M%S'`
-git commit -m "$time:$TEMP_DIR"
+git commit -m "$TEMP_DIR/$FILE_NAME"
 hgitpush $USER $PASSWD
